@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pavithra R | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4">
+  </video>
+  <div id="overlay"></div>
+
+  <!-- Dark/Light toggle -->
+  <div class="toggle-theme">
+    <input type="checkbox" id="theme-checkbox">
+    <label for="theme-checkbox">🌙</label>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="home">
+    <div class="hero-inner">
+      <h1 class="animated-header">Pavithra R</h1>
+      <p class="lead">BCA Graduate · Data Enthusiast · SQL Developer</p>
+
+      <div class="roles">
+        <span>I build & analyze data as a </span>
+        <span class="typed" id="typed-role"></span>
+        <span class="caret"></span>
+      </div>
+
+      <div class="hero-buttons">
+        <a class="btn" href="Pavithra R Resume.pdf" download>📄 Download Résumé</a>
+        <a class="btn btn-outline" href="#projects">See Projects</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- About Section -->
+    <section id="about">
+      <h2 class="animated-header">About Me</h2>
+      <div class="summary">
+        <p>Motivated professional with hands-on experience in <strong>SQL</strong>, <strong>database management</strong>, and basic <strong>Python</strong>.
+          Passionate about turning raw data into actionable insights and building reliable database solutions. Seeking roles as a
+          <span class="highlight">SQL Developer</span>, <span class="highlight">Data Analyst</span>, or <span class="highlight">Database Administrator</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="animated-header">Technical Skills</h2>
+      <div class="grid skills-grid">
+        <div class="card"><h3>SQL</h3><div class="skill-bar"><div style="width:85%"></div></div><p>Intermediate — joins, window functions, subqueries, aggregations.</p></div>
+        <div class="card"><h3>Python</h3><div class="skill-bar"><div style="width:65%"></div></div><p>Data cleaning, pandas, automation tasks.</p></div>
+        <div class="card"><h3>Power BI</h3><div class="skill-bar"><div style="width:70%"></div></div><p>Interactive dashboards and data modeling.</p></div>
+        <div class="card"><h3>HTML & CSS</h3><div class="skill-bar"><div style="width:75%"></div></div><p>Responsive layouts, component-based UI.</p></div>
+        <div class="card"><h3>Design Tools</h3><div class="skill-bar"><div style="width:60%"></div></div><p>Figma & Canva for prototypes and wireframes.</p></div>
+        <div class="card"><h3>Office & Collaboration</h3><div class="skill-bar"><div style="width:80%"></div></div><p>MS Office, Google Suite — documentation & reporting.</p></div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="animated-header">Selected Projects</h2>
+      <div class="grid">
+
+        <div class="card project-card">
+          <img src="images/Advanced SQL Employee Data Analysis.png" alt="Advanced SQL Project">
+          <h3>Advanced SQL Employee Data Analysis</h3>
+          <p>Queries using filtering, joins, aggregations and window functions to extract HR insights.</p>
+<button class="github-btn" onclick="openGitHubPopup('https://github.com/Pavithra1226/advanced_queries.sql/blob/main/advanced_queries.sql')">View on GitHub</button>
+        </div>
+
+        <div class="card project-card">
+          <img src="images/Network Intrusion Detection.png" alt="Network Detection Project">
+          <h3>Network Intrusion Detection</h3>
+          <p>Random Forest classifier trained on the KDD dataset to identify network anomalies.</p>
+          <button class="github-btn" onclick="openGitHubPopup('https://github.com/Pavithra1226/data-visualization/blob/main/intrusion%20detection-checkpoint.ipynb')">View on GitHub</button>
+        </div>
+
+        <div class="card project-card">
+          <img src="images/chart.png" alt="Employee Dashboard">
+          <h3>Employee Dashboard & Insights</h3>
+          <p>Power BI dashboard showing salary distributions, leave analysis, and trends.</p>
+          <button class="github-btn" onclick="openGitHubPopup('https://github.com/Pavithra1226/employee-insights-dashboardINK')">View on GitHub</button>
+        </div>
+
+        <div class="card project-card">
+          <img src="images/png1.png" alt="Internship App UI">
+          <h3>Inten – Internship Finder App (UI)</h3>
+          <p>Figma prototype for a mobile internship application with job listing and application tracking.</p>
+<button class="github-btn" onclick="openVideoPopup('ui.mp4')">View project</button>
+        </div>
+
+      <!-- GitHub Link Popup (for first 3 projects) -->
+<div id="githubPopup" class="popup">
+  <span class="close-btn" onclick="closeGithubPopup()">&times;</span>
+  <h3>Project GitHub Link</h3>
+  <p id="githubLinkText"></p>
+  <a id="githubLinkBtn" href="#" target="_blank" class="open-btn">Open in GitHub</a>
+</div>
+
+<!-- Video Popup (for last project UI video) -->
+<div id="videoPopup" class="popup">
+  <span class="close-btn" onclick="closeVideoPopup()">&times;</span>
+  <video id="projectVideo" controls></video>
+</div>
+
+
+
+    </section>
+    
+
+    <!-- CERTIFICATIONS --> <section id="certifications">
+       <h2 style="text-align:left;color:var(--accent);margin-bottom:14px;font-family:Poppins">Certifications</h2> 
+       <div class="grid">
+         <div class="card">
+           <h3>Cisco Data Analyst Professional Certificate</h3>
+            <img src="images/forage.jpg" alt="Cisco Certificate"> 
+          </div> <div class="card"> <h3>Python Programming – GUVI</h3>
+             <img src="images/GuviCertification.png" alt="Guvi Certificate"> 
+            </div> 
+          </div> 
+        </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2 class="animated-header">Contact</h2>
+      <div class="grid">
+        <div class="card contact-card"><h3>📧 Email</h3><p><a href="mailto:pavithraragu26@gmail.com">pavithraragu26@gmail.com</a></p></div>
+        <div class="card contact-card"><h3>🔗 LinkedIn</h3><p><a href="https://www.linkedin.com/in/pavithra-ragu" target="_blank">linkedin.com/in/pavithra-ragu</a></p></div>
+        <div class="card contact-card"><h3>💻 GitHub</h3><p><a href="https://github.com/Pavithra1226" target="_blank">github.com/Pavithra1226</a></p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GitHub Popup (only one) -->
+  <div id="githubPopup" class="popup-overlay">
+    <div class="popup-box">
+      <h2>GitHub Project Link</h2>
+      <a id="githubLink" href="#" target="_blank"></a>
+      <button class="close-btn" onclick="closeGitHubPopup()">Close</button>
+    </div>
+  </div>
+
+  <!-- Certificate Popup -->
+  <div id="cert-popup">
+    <span id="close-popup">&times;</span>
+    <img id="popup-img" src="" alt="Certificate">
+  </div>
+
+  <footer>
+    &copy; 2025 Pavithra R · Designed & maintained by Pavithra
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
